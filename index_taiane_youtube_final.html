@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taiane 💖 Júlio</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #fff;
+      font-size: 2.5em;
+      margin-top: 30px;
+    }
+    p {
+      color: #fff;
+      font-size: 1.3em;
+      margin: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 250px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00000055;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      color: #ff5e7e;
+      font-size: 24px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Taiane 💖 Júlio</h1>
+  <p>Já passamos por muita coisa, mas o sabor do nosso amor ainda é de trakinas de morango com coca gelada.</p>
+  <div class="gallery">
+    <img src="imagem1.jpg" alt="Foto 1">
+    <img src="imagem2.jpg" alt="Foto 2">
+    <img src="imagem3.jpg" alt="Foto 3">
+    <img src="imagem4.jpg" alt="Foto 4">
+    <img src="imagem5.jpg" alt="Foto 5">
+    <img src="imagem6.jpg" alt="Foto 6">
+    <img src="imagem7.jpg" alt="Foto 7">
+    <img src="imagem8.jpg" alt="Foto 8">
+    <img src="imagem9.jpg" alt="Foto 9">
+    <img src="imagem10.jpg" alt="Foto 10">
+  </div>
+  <div style="margin-top: 30px;">
+    <iframe width="300" height="200"
+      src="https://www.youtube.com/embed/mbG5fhlMdrI?autoplay=1&loop=1&playlist=mbG5fhlMdrI"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <div class="hearts">
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerText = "💗";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+      setInterval(createHeart, 300);
+    </script>
+  </div>
+</body>
+</html>
