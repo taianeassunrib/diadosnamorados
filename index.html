@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taiane e Júlio ❤️ Nosso Amor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body {
+      margin: 0;
+      background: #ffe6f0;
+      font-family: 'Pacifico', cursive;
+      color: #a83279;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.2em;
+    }
+    p.frase {
+      font-size: 1.6rem;
+      margin: 0 auto 40px;
+      max-width: 600px;
+      font-style: italic;
+      color: #7a1f4b;
+      text-shadow: 1px 1px 3px #f8b6d4;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 50px;
+    }
+    .galeria img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(168, 50, 121, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .galeria img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(168, 50, 121, 0.6);
+    }
+    audio {
+      outline: none;
+      margin-bottom: 20px;
+    }
+    footer {
+      font-size: 1rem;
+      color: #a83279dd;
+      margin-top: 20px;
+    }
+    /* Corações animados */
+    .heart {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background: #e91e63;
+      transform: rotate(-45deg);
+      top: 0;
+      left: 0;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+      border-radius: 15px 15px 0 0;
+      z-index: 0;
+    }
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #e91e63;
+      border-radius: 50%;
+    }
+    .heart:before {
+      top: -15px;
+      left: 0;
+    }
+    .heart:after {
+      top: 0;
+      left: 15px;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-600px) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Taiane e Júlio ❤️</h1>
+
+  <p class="frase">
+    "Já passamos por muita coisa, mas o sabor do nosso amor ainda é de trakinas de morango com coca gelada."
+  </p>
+
+  <div class="galeria">
+    <img src="https://drive.google.com/uc?export=view&id=1IMTo6gzNzEOJWvrLUTNmUtZF0SRpxEh4" alt="Foto 1" />
+    <img src="https://drive.google.com/uc?export=view&id=1I0L9ymHnfpaW5SzBuDGNPpt0_RnMBYSr" alt="Foto 2" />
+    <img src="https://drive.google.com/uc?export=view&id=1I0L9ymHnfpaW5SzBuDGNPpt0_RnMBYSr" alt="Foto 3" />
+    <img src="https://drive.google.com/uc?export=view&id=1jVXfHARCikTwrqgIcExXrLRk3zwGaphS" alt="Foto 4" />
+    <img src="https://drive.google.com/uc?export=view&id=1F8AhlsoQE2ABjafPKSB7fd0cdscdzhec" alt="Foto 5" />
+    <img src="https://drive.google.com/uc?export=view&id=1ThbvSt1zh-gCq_ceU0_I53HNjSRo_-fa" alt="Foto 6" />
+    <img src="https://drive.google.com/uc?export=view&id=14hXtwdMx4f_xXW0E2BLa9J8rRQz3G0iJ" alt="Foto 7" />
+    <img src="https://drive.google.com/uc?export=view&id=19Ze1MYtF-t_K-XfcazrCXJfxCmnPu07g" alt="Foto 8" />
+    <img src="https://drive.google.com/uc?export=view&id=16RLmlxUGDt_aibMBy5Faw-VCdsXAG1DM" alt="Foto 9" />
+    <img src="https://drive.google.com/uc?export=view&id=16RLmlxUGDt_aibMBy5Faw-VCdsXAG1DM" alt="Foto 10" />
+    <img src="https://drive.google.com/uc?export=view&id=1fpac6asfGeSxBi6GeQ1qxujTbbX_eRMY" alt="Foto 11" />
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_5667e7a9f0.mp3?filename=romantic-acoustic-guitar-5281.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <footer>Com amor, Taiane 💖</footer>
+
+  <script>
+    const totalHearts = 20;
+    for(let i = 0; i < totalHearts; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.animationDelay = (Math.random() * 6) + 's';
+      heart.style.width = (20 + Math.random() * 20) + 'px';
+      heart.style.height = heart.style.width;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
